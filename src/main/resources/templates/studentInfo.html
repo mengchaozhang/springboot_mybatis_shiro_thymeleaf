@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>个人信息</title>
+</head>
+<body>
+<a th:href="@{index}">返回首页》》</a><br/>
+姓名：<span th:text="${student.stuname}"></span><br/>
+性别：<span th:text="${student.stusex}"></span><br/>
+年龄：<span th:text="${student.stuage}"></span>
+</body>
+</html>

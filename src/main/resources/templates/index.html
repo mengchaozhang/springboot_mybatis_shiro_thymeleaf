@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8"/>
+    <title>首页</title>
+</head>
+<body>
+<a shiro:hasRole="teacher" href="studentList">查看学生列表</a>
+<a shiro:hasRole="student" href="studentInfo">查看个人信息</a>
+<a shiro:hasRole="student" href="updateInfo">修改个人信息</a>
+</body>
+</html>

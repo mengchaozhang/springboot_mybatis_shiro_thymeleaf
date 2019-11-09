@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>修改个人信息</title>
+</head>
+<body>
+<a th:href="@{index}">返回首页》》</a>
+<form action="goUpdateInfo" method="post">
+    <input type="hidden" th:value="${student.stuid}" name="stuid"/>
+    姓名：<input type="text" th:value="${student.stuname}" name="stuname"/><br/>
+    性别：<input th:if="${student.stusex == '男'}" type="radio" value="男" checked="checked" name="stusex"/>
+    <input th:if="${!(student.stusex == '男')}" type="radio" value="男" name="stusex"/>男
+    <input th:if="${student.stusex == '女'}" type="radio" value="女" checked="checked" name="stusex"/>
+    <input th:if="${!(student.stusex == '女')}" type="radio" value="女" name="stusex"/>女<br/>
+    <input th:
+    年龄：<input type="text" th:value="${student.stuage}" name="stuage"/><br/>
+    <input type="submit" value="确认修改"/>
+</form>
+</body>
+</html>
